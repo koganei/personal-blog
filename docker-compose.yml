@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  reverse:
+    container_name: blog-dev
+    image: jekyll/jekyll:4.2.0
+    command: jekyll serve -l
+    ports:
+      - 4000:4000
+    volumes:
+      - /mnt/D/workspace/personal-blog/personal-blog:/srv/jekyll
+      - /mnt/D/workspace/personal-blog/bundle:/usr/local/bundle
